@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+   <title><%= full_title(yield(:title)) %></title>
+  <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
+  <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+
+<%= yield %>
+
+<div class="layer">
+  <span class="menu">Menu</span>
+  <ul>
+    <li><%= link_to 'Home', root_path %></li>
+    <li><%= link_to 'About', about_path %></li>
+    <li><%= link_to 'Cat Pictures', cats_path %></li>
+    <li><%= link_to 'Pokemon DB', pokemons_path %>
+  </ul>
+</div>
+
+<% flash.each do |type, message| %>
+  <div class="<%= type %>">
+    <p><%= message %></p>
+  </div>
+<% end %>
+
+<% if user_signed_in? %>
+  <li>Signed in in as <%= current_user.email %></li>
+  <li><%= link_to "Sign Out", sign_out_path, method: :delete %></li>
+<% else %>
+  <li><%= link_to "Sign In", sign_in_path %></li>
+<% end %>
+
+</body>
+</html>

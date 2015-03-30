@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Number:</strong>
+  <%= @pokemon.number %>
+</p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @pokemon.name %>
+</p>
+
+<p>
+  <strong>Breed:</strong>
+  <%= @pokemon.breed %>
+</p>
+
+<p>
+  <strong>Tier:</strong>
+  <%= @pokemon.tier %>
+</p>
+
+<p>
+  <strong>Final evolution:</strong>
+  <%= @pokemon.final_evolution %>
+</p>
+
+<%= link_to 'Edit', edit_pokemon_path(@pokemon) %> |
+<%= link_to 'Back', pokemons_path %>

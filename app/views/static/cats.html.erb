@@ -1,0 +1,8 @@
+<head>
+  <% provide(:title, "Cat Pics") %>
+</head>
+
+<% @cats.each do |cat| %>
+  <img src="<%= cat.url %>" alt="Cat pic">
+<% end %>
+

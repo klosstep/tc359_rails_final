@@ -1,0 +1,63 @@
+// Place all the styles related to the static controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+img {
+  max-width: 500px;
+}
+
+.home-about {
+  text-align:center;
+  width: 600px;
+  display: block;
+  margin-left:auto;
+  margin-right:auto;
+  font-family: Helvetica;
+  margin-bottom: 40px;
+}
+
+.layer {
+  background-color: #ccc;
+  border-radius: 3px;
+  text-align: center;
+  font-family: Helvetica;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  margin-top: 20px;
+}
+
+.menu {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+ul {
+    list-style-type: none;
+    margin-bottom: 0px;
+    margin-top: 20px;
+}
+
+li {
+  display:inline;
+  padding-left: 30px;
+}
+
+li:first-child {
+  padding-left: 0px;
+}
+
+a{
+  text-decoration: none;
+  color: black;
+}
+
+a:hover {
+  color: white;
+}
+
+a:visited {
+  color:black;
+}

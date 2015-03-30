@@ -1,0 +1,37 @@
+<%= form_for(@pokemon) do |f| %>
+  <% if @pokemon.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@pokemon.errors.count, "error") %> prohibited this pokemon from being saved:</h2>
+
+      <ul>
+      <% @pokemon.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :number %><br>
+    <%= f.number_field :number %>
+  </div>
+  <div class="field">
+    <%= f.label :name %><br>
+    <%= f.text_field :name %>
+  </div>
+  <div class="field">
+    <%= f.label :breed %><br>
+    <%= f.select :breed, options_for_select(['Fire', 'Grass', 'Water', 'Psychic', 'Dark', 'Fighting', 'Fairy', 'Bug', 'Ice', 'Electric', 'Flying', 'Steel', 'Normal', 'Rock', 'Ground', 'Dragon', 'Ghost', 'Poison' ].sort) %>
+  </div>
+  <div class="field">
+    <%= f.label :tier %><br>
+    <%= f.text_field :tier %>
+  </div>
+  <div class="field">
+    <%= f.label :final_evolution %><br>
+    <%= f.check_box :final_evolution %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

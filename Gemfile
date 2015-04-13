@@ -53,6 +53,11 @@ group :development, :test do
 end
 
 gem 'tzinfo-data', platforms: [:mingw, :mswin]
+
+gem 'bootstrap-sass', '~> 3.3.4'
+
+gem "autoprefixer-rails"
+
 # Use unicorn as the app server
 # gem 'unicorn'
 

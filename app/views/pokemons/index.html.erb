@@ -1,38 +1,44 @@
-<h1>Pokemon Database</h1>
+<div class="container">
+  <div class="row db">
+    <h1>Pokemon Database</h1>
 
-<table>
-  <thead>
-    <tr>
-      <th>Number</th>
-      <th>Name</th>
-      <th>Breed</th>
-      <th>Tier</th>
-      <th>Final evolution</th>
-      <th></th>
-      <th></th>
-      <th></th>
-    </tr>
-  </thead>
+    <table>
+      <thead>
+        <tr>
+          <th>Number</th>
+          <th>Name</th>
+          <th>Breed</th>
+          <th>Tier</th>
+          <th>Final evolution</th>
+          <th></th>
+          <th></th>
+          <th></th>
+        </tr>
+      </thead>
 
-  <tbody>
-    <% @pokemons.each do |pokemon| %>
-      <tr>
-        <td><%= pokemon.number %></td>
-        <td><%= pokemon.name %></td>
-        <td><%= pokemon.breed %></td>
-        <td><%= pokemon.tier %></td>
-        <td><%= pokemon.final_evolution %></td>
-        <td><%= link_to 'Show', pokemon %></td>
-        <% if user_signed_in? %>
-          <td><%= link_to 'Edit', edit_pokemon_path(pokemon) %></td>
-          <td><%= link_to 'Destroy', pokemon, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      <tbody>
+        <% @pokemons.each do |pokemon| %>
+          <tr>
+            <td><%= pokemon.number %></td>
+            <td><%= pokemon.name %></td>
+            <td class="breed-<%= pokemon.breed.downcase %>"><%= pokemon.breed %></td>
+            <td><%= pokemon.tier %></td>
+            <td id="FE"><%= pokemon.final_evolution %></td>
+            <td><%= link_to 'Show', pokemon %></td>
+            <% if user_signed_in? %>
+              <td><%= link_to 'Edit', edit_pokemon_path(pokemon) %></td>
+              <td><%= link_to 'Destroy', pokemon, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+            <% end %>
+          </tr>
         <% end %>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
+      </tbody>
+    </table>
 
-<br>
-<% if user_signed_in? %>
-  <%= link_to 'New Pokemon', new_pokemon_path %>
-<% end %>
+    <br>
+    <% if user_signed_in? %>
+      <strong><%= link_to 'New Pokemon', new_pokemon_path %></strong>
+    <% end %>
+  </div>
+</div>
+
+

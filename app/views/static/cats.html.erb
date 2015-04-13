@@ -2,7 +2,13 @@
   <% provide(:title, "Cat Pics") %>
 </head>
 
-<% @cats.each do |cat| %>
-  <img src="<%= cat.url %>" alt="Cat pic">
-<% end %>
+<div class="container">
+  <div class="row">
+    <% @cats.each do |cat| %>
+      <img src="<%= cat.url %>" alt="Cat pic">
+    <% end %>
+    
+  </div>
+</div>
+
 

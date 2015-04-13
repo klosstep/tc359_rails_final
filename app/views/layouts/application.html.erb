@@ -10,28 +10,33 @@
 
 <%= yield %>
 
-<div class="layer">
-  <span class="menu">Menu</span>
-  <ul>
-    <li><%= link_to 'Home', root_path %></li>
-    <li><%= link_to 'About', about_path %></li>
-    <li><%= link_to 'Cat Pictures', cats_path %></li>
-    <li><%= link_to 'Pokemon DB', pokemons_path %>
-  </ul>
-</div>
+<div class="container">
+  <div class="row">
+    <div class="layer">
+      <span class="menu">Menu</span>
+      <ul>
+        <li><%= link_to 'Home', root_path %></li>
+        <li><%= link_to 'About', about_path %></li>
+        <li><%= link_to 'Cat Pictures', cats_path %></li>
+        <li><%= link_to 'Pokemon DB', pokemons_path %>
+      </ul>
+    </div>
 
-<% flash.each do |type, message| %>
-  <div class="<%= type %>">
-    <p><%= message %></p>
+    <% flash.each do |type, message| %>
+      <div class="<%= type %>">
+        <p><%= message %></p>
+      </div>
+    <% end %>
+
+    <% if user_signed_in? %>
+      <li>Signed in in as <%= current_user.email %></li>
+      <li id="right"><%= link_to "Sign Out", sign_out_path, method: :delete %></li>
+    <% else %>
+      <li><%= link_to "Sign In", sign_in_path %></li>
+    <% end %>
+
   </div>
-<% end %>
-
-<% if user_signed_in? %>
-  <li>Signed in in as <%= current_user.email %></li>
-  <li><%= link_to "Sign Out", sign_out_path, method: :delete %></li>
-<% else %>
-  <li><%= link_to "Sign In", sign_in_path %></li>
-<% end %>
+</div>
 
 </body>
 </html>

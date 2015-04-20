@@ -5,23 +5,18 @@
     <br>
     <%= form_tag sessions_path do %>
     <div class="form-group form-group-lg">
-      <div class="field">
-        <h4><%= label_tag :email %></h4><br>
-        <div class="col-xs-6">
-          <%= text_field_tag :email, '', class: "form-control" %>
+      <div class="col-xs-6">
+        <div class="field">
+          <h4><%= label_tag :email %></h4><br>
+            <%= text_field_tag :email, '', class: "form-control" %>
         </div>
-      </div>
-      <br>
-      <div class="field">
-        <h4><%= label_tag :password %></h4><br>
-        <div class="col-xs-6">
-          <%= password_field_tag :password, '', class: "form-control" %>
+        <div class="field">
+          <h4><%= label_tag :password %></h4><br>
+            <%= password_field_tag :password, '', class: "form-control" %>
         </div>
-      </div>
-      <br>
-      <br>
-      <div class="actions">
-        <%= submit_tag "Log In", class: "btn btn-primary" %>
+        <div class="actions">
+          <%= submit_tag "Log In", class: "btn btn-primary" %>
+        </div>
       </div>
     </div>
     <% end %>

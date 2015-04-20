@@ -18,6 +18,10 @@ RailsApp1::Application.routes.draw do
 
   resources :sessions, only: [:new, :create, :destroy]
 
+  resources :users, only: [:new, :create]
+
+  get 'signup'  => 'users#new'
+
   get '/sign-in' => 'sessions#new'
   delete '/sign-out' => 'sessions#destroy'
 

@@ -11,23 +11,24 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150330151011) do
+ActiveRecord::Schema.define(version: 20150420170733) do
 
-  create_table "pokemons", force: true do |t|
+  create_table "pokemons", force: :cascade do |t|
     t.integer  "number"
-    t.string   "name"
-    t.string   "breed"
-    t.string   "tier"
+    t.string   "name",            limit: 255
+    t.string   "breed",           limit: 255
+    t.string   "tier",            limit: 255
     t.boolean  "final_evolution"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
 
-  create_table "users", force: true do |t|
-    t.string   "email"
-    t.string   "password_digest"
+  create_table "users", force: :cascade do |t|
+    t.string   "email",           limit: 255
+    t.string   "password_digest", limit: 255
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "name"
   end
 
 end

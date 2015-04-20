@@ -4,7 +4,7 @@ ul {
   margin-top: 20px;
 }
 
-#right {
+.right {
   float: right;
   padding-right: 30px;
 }
@@ -30,5 +30,12 @@ a{
   }
 }
 
+.field {
+  margin: 20px;
+  margin-left: 0px;
+}
 
+.form-control {
+  margin-bottom: 20px;
+}
 

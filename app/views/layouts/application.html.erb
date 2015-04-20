@@ -28,12 +28,17 @@
       </div>
     <% end %>
 
+
+    
+    <ul>
     <% if user_signed_in? %>
       <li>Signed in in as <%= current_user.email %></li>
-      <li id="right"><%= link_to "Sign Out", sign_out_path, method: :delete %></li>
+      <li class="right"><%= link_to "Sign Out", sign_out_path, method: :delete %></li>
     <% else %>
-      <li><%= link_to "Sign In", sign_in_path %></li>
+      <li class="right"><%= link_to "Sign In", sign_in_path, class: "btn btn-default"  %></li>
+      <li class="right"><%= link_to "Sign up", signup_path, class: "btn btn-default" %></li>
     <% end %>
+    </ul>
 
   </div>
 </div>

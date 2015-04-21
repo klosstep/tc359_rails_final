@@ -58,6 +58,8 @@ gem 'bootstrap-sass', '~> 3.3.4'
 
 gem "autoprefixer-rails"
 
+gem 'simple_form'
+
 # Use unicorn as the app server
 # gem 'unicorn'
 

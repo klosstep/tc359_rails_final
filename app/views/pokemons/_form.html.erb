@@ -1,7 +1,7 @@
 <div class="container">
   <div class="row">
 
-    <%= form_for(@pokemon) do |f| %>
+    <%= simple_form_for (@pokemon) do |f| %>
       <% if @pokemon.errors.any? %>
         <div id="error_explanation">
           <h2><%= pluralize(@pokemon.errors.count, "error") %> prohibited this pokemon from being saved:</h2>
@@ -13,36 +13,32 @@
           </ul>
         </div>
       <% end %>
-
-      <div class="field">
-        <%= f.label :number %><br>
-        <%= f.number_field :number %>
+      <div class="col-xs-3">
+        <div class="field">
+          <%= f.input :number, label: 'Number' %>
+        </div>
+        <br>
+        <div class="field">
+          <%= f.input :name, label: 'Name' %>
+        </div>
+        <br>
+        <div class="field">
+          <%= f.input :breed, :collection => ['Fire', 'Grass', 'Water', 'Psychic', 'Dark', 'Fighting', 'Fairy', 'Bug', 'Ice', 'Electric', 'Flying', 'Steel', 'Normal', 'Rock', 'Ground', 'Dragon', 'Ghost', 'Poison' ].sort %>
+        </div>
+        <br>
+        <div class="field">
+          <%= f.input :tier, label: 'Tier' %>
+        </div>
+        <br>
+        <div class="field">
+          <%= f.input :final_evolution, label: 'Final Evolution?' %>
+        </div>
+        <br>
+        <div class="actions">
+           <%= f.submit "Create Pokemon", class: "btn btn-primary" %>
+        </div>
+        <br>
       </div>
-      <br>
-      <div class="field">
-        <%= f.label :name %><br>
-        <%= f.text_field :name %>
-      </div>
-      <br>
-      <div class="field">
-        <%= f.label :breed %><br>
-        <%= f.select :breed, options_for_select(['Fire', 'Grass', 'Water', 'Psychic', 'Dark', 'Fighting', 'Fairy', 'Bug', 'Ice', 'Electric', 'Flying', 'Steel', 'Normal', 'Rock', 'Ground', 'Dragon', 'Ghost', 'Poison' ].sort) %>
-      </div>
-      <br>
-      <div class="field">
-        <%= f.label :tier %><br>
-        <%= f.text_field :tier %>
-      </div>
-      <br>
-      <div class="field">
-        <%= f.label :final_evolution %><br>
-        <%= f.check_box :final_evolution %>
-      </div>
-      <br>
-      <div class="actions">
-        <%= f.submit %>
-      </div>
-      <br>
     <% end %>
     
   </div>

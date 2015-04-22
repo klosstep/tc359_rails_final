@@ -1,3 +1,10 @@
+$violet: #EE82EE;
+$tan: #E0A366;
+$dark-brown: #663300;
+$yellow-green: #9ACD32;
+$rebecca-purple: #663399;
+$lavender: #DA99CA;
+
 .db {
 
   td,th {
@@ -19,7 +26,7 @@
     color: blue;
   }
   .breed-fairy {
-    color: #EE82EE; /* Violet */
+    color: $violet; /* Violet */
   }
   .breed-dark {
     color: black;
@@ -28,19 +35,19 @@
     color: gray;
   }
   .breed-ground {
-    color: tan;  /* Tan */
+    color: $tan; 
   }
   .breed-rock {
-    color: #663300; /* Dark Brown */
+    color: $dark-brown; /* Dark Brown */
   }
   .breed-dragon {
     color: navy;
   }
   .breed-bug {
-    color: #9ACD32; /* Yellow-Green */
+    color: $yellow-green; /* Yellow-Green */
   }
   .breed-psychic {
-    color: purple;
+    color: $lavender;
   }
   .breed-electric {
     color: yellow;
@@ -58,7 +65,7 @@
     color: purple; 
   }
   .breed-poison {
-    color: #663399; /* Rebecca Purple */
+    color: $rebecca-purple; /* Rebecca Purple */
   }
 }
 

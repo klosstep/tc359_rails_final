@@ -1,3 +1,6 @@
+$gray: #ccc; 
+$helvetica: Helvetica, sans-serif;
+
 h1{
   margin-bottom: 20px;
 }
@@ -15,12 +18,12 @@ img {
   display: block;
   margin-left:auto;
   margin-right:auto;
-  font-family: Helvetica;
+  font-family: $helvetica;
   margin-bottom: 40px;
 }
 
 .layer {
-  background-color: #ccc;
+  background-color: $gray;
   border-radius: 3px;
   text-align: center;
   font-family: Helvetica;

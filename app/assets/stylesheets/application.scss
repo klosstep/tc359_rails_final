@@ -8,17 +8,19 @@ $breed-ground-color: #E0A366;
 $breed-rock-color: #663300;
 $breed-bug-color: #9ACD32;
 $breed-poison-color: #663399;
-$breed-psychic-color: #DA99CA;
+$breed-psychic-color: #9900CC;
+$breed-electric-color: #CCA300;
+$breed-steel-color: #6D6D6D;
+$breed-flying-color: #9EBFFF;
 $breed-fire-color: red;
 $breed-water-color: blue;
 $breed-grass-color: green;
-$breed-steel-color: gray;
 $breed-dragon-color: navy;
-$breed-electric-color: yellow;
 $breed-ice-color: aqua;
-$breed-flying-color: silver;
 $breed-fighting-color: maroon;
 $breed-ghost-color: purple;
+$breed-normal-color: silver;
+
 
 @import "bootstrap-sprockets";
 @import "bootstrap";

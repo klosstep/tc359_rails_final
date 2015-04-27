@@ -1,0 +1,65 @@
+
+.db {
+
+  td,th {
+    padding-right: 10px;
+    padding-bottom: 5px;
+  }
+
+  #FE {
+    text-align: center;
+  }
+
+  .breed-fire {
+    color: $breed-fire-color;
+  }
+  .breed-grass {
+    color: $breed-grass-color;
+  }
+  .breed-water {
+    color: $breed-water-color;
+  }
+  .breed-fairy {
+    color: $breed-fairy-color; /* Violet */
+  }
+  .breed-dark {
+    color: $black;
+  }
+  .breed-steel {
+    color: $breed-steel-color;
+  }
+  .breed-ground {
+    color: $breed-ground-color; 
+  }
+  .breed-rock {
+    color: $breed-rock-color; /* Dark Brown */
+  }
+  .breed-dragon {
+    color: $breed-dragon-color;
+  }
+  .breed-bug {
+    color: $breed-bug-color; /* Yellow-Green */
+  }
+  .breed-psychic {
+    color: $breed-psychic-color;
+  }
+  .breed-electric {
+    color: $breed-electric-color;
+  }
+  .breed-ice {
+    color: $breed-ice-color;
+  }
+  .breed-flying {
+    color: $breed-flying-color;
+  }
+  .breed-fighting {
+    color: $breed-fighting-color;
+  }
+  .breed-ghost {
+    color: $breed-ghost-color; 
+  }
+  .breed-poison {
+    color: $breed-poison-color; /* Rebecca Purple */
+  }
+}
+

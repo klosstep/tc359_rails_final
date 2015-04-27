@@ -1,6 +1,28 @@
+$black: black;
+$red: red;
+$gray: #ccc; 
+$helvetica: Helvetica, sans-serif;
+
+$breed-fairy-color: #EE82EE;
+$breed-ground-color: #E0A366;
+$breed-rock-color: #663300;
+$breed-bug-color: #9ACD32;
+$breed-poison-color: #663399;
+$breed-psychic-color: #DA99CA;
+$breed-fire-color: red;
+$breed-water-color: blue;
+$breed-grass-color: green;
+$breed-steel-color: gray;
+$breed-dragon-color: navy;
+$breed-electric-color: yellow;
+$breed-ice-color: aqua;
+$breed-flying-color: silver;
+$breed-fighting-color: maroon;
+$breed-ghost-color: purple;
+
 @import "bootstrap-sprockets";
 @import "bootstrap";
-@import "pokemons";
-@import "sessions";
-@import "static";
-@import "lists-links";
+@import "database/pokemons";
+@import "bootstrap/sessions";
+@import "bootstrap/static";
+@import "bootstrap/lists-links";
